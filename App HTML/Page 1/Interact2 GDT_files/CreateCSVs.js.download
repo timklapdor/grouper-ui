@@ -1,0 +1,20 @@
+function CreateCSVs(grpID,grpTitle,grpDesc) {
+<!-- BETTER CHECK GROUPS SETUP FIRST (Group IDs not grouped )-->
+var header = '"Group Code","Title","Description","Group Set","Available"';
+var group = '"' + grpID + '","' + grpTitle +  '","' + grpDesc + '",,"N"';
+var grpFileName = "Group_" + grpID + ".csv";
+var rows = [header,group];
+console.log("Header     = ",rows[0]);
+console.log("Group data = ",rows[1]);
+
+exportToCsv(grpFileName, rows);
+var dv = dataView
+rows[0] = '"Group Code","User Name"';
+
+for (var j = 0; j < dv.getLength(); j++) {
+  rows[j+1] = '"' + dv.getItem(j).groupID + '","' + dv.getItem(j).id + '"'
+  console.log(rows[j]);
+  }
+var memsFileName = "Members_" + grpID + ".csv";
+exportToCsv(memsFileName, rows);
+}

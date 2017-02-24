@@ -1,0 +1,17 @@
+.vertical-center {
+  min-height: 20vh;
+  min-height: 40vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron img {
+  min-width: 50vw;
+  max-width: 60vw;
+}
+
+.extra-padding {
+  padding-top: 3em;
+}

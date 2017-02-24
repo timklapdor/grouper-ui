@@ -1,0 +1,65 @@
+  function CreateGroups() {
+    var grpSize = document.getElementById("grpSize").value;
+    var rb = document.getElementById("rbSet").checked;
+    var tailAsGrp = document.getElementById("rbTailAsGroup").checked;
+    var grpSize = document.getElementById("grpSize").value;
+    var dv = dataView
+    var numS = dv.getLength()
+    var grpCnt = 0;
+    var tag = document.getElementById("grpID").value + "_";
+    console.log("In CreateGroups, rb= ",rb," tailAsGroup = ",tailAsGrp)
+    if (rb){
+      console.log("Groups will have set size of ",grpSize," Data size = ",numS);
+      var i = 0;
+      do {
+        if ((grpCnt+1)*grpSize <= numS) {
+            console.log("Taging group ",grpCnt);
+            grpCnt += 1;
+            for (var j = 0; j < grpSize; j++) {
+              console.log("Taging student ",i);
+              dv.getItem(i).groupID = tag + grpCnt.toString()
+              i += 1;
+              }
+            }
+        else {
+            if (tailAsGrp) {
+              console.log("Taging tail ","i= ",i);
+              grpCnt += 1;
+              console.log("Taging group ",grpCnt);
+              for (var j = i; j <= numS-1; j++) {
+                console.log("Taging student ",j);
+                dv.getItem(j).groupID = tag + grpCnt.toString()
+                }
+              i = numS + 1;
+              }
+
+            else {
+              console.log("Taging tail ","i= ",i);
+              console.log("Taging group ",grpCnt);
+              for (var j = i; j <= numS-1; j++) {
+                console.log("Taging student ",j);
+                dv.getItem(j).groupID = tag + grpCnt.toString()
+                grpCnt -= 1;
+                }
+              i = numS + 1;
+              }
+            }
+      } while (i <= numS);
+
+      }
+      else{
+        console.log("Grouping by tag ");
+        grpCnt = 1;
+        var prevTag = dv.getItem(0).sortString;
+        for (var j = 0; j <= numS-1; j++) {
+          console.log("Student ",j);
+          if (prevTag != dv.getItem(j).sortString) {grpCnt += 1;}
+          dv.getItem(j).groupID = tag + grpCnt.toString();
+          prevTag = dv.getItem(j).sortString;
+          }
+        }
+  grid.invalidate();
+
+  document.getElementById("csvs").value = "Download CSV files";  
+  document.getElementById("csvs").disabled = false;
+  }
