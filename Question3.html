@@ -36,10 +36,10 @@
               <ul class="nav navbar-nav">
                   <li><a href="index.html">Home</a></li>
                   <li><a href="User-Summary.html">User</a></li>
-                  <li ><a href="Select-Survey.html">Select</a></li>
-                  <li  class="active"><a href="Question1.html">Q1</a></li>
-                  <li ><a href="Question2.html">Q2</a></li>
-                  <li ><a href="Question3.html">Q3</a></li>
+                  <li><a href="Select-Survey.html">Select</a></li>
+                  <li><a href="Question1.html">Q1</a></li>
+                  <li><a href="Question2.html">Q2</a></li>
+                  <li  class="active"><a href="Question3.html">Q3</a></li>
               </ul>
             </div>
             <!--/.nav-collapse -->
@@ -50,35 +50,77 @@
 
 <div class="container">
 
-  <h2>Question 1</h2>
+  <h2>Question 3</h2>
 
   <p>Question text can appear in this area</p>
 
   <div class="container">
     <form class="form-horizontal" action="http://localhost:8080/GTSurvey/displaySurvey" method="post">
 
-        <div class="form-group">
-        <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-              Option One</label>
-            </div>
-        <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-              Option Two</label>
-            </div>
-        <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-              Option Three</label>
-            </div>
-        <div class="radio">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
-                Option Four</label>
-              </div>
-        </div>
+          <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th class="text-center">4-5pm</th>
+            <th class="text-center">5-6pm</th>
+            <th class="text-center">6-7pm</th>
+            <th class="text-center">7-8pm</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <th scope=row>Monday</th>
+            <td>...</td>
+            <td class="text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th scope=row>Tuesday</th>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th scope=row>Wednesday</th>
+            <td>...</td>
+            <td  class="text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th scope=row>Thursday</th>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th scope=row>Friday</th>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th scope=row>Saturday</th>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th scope=row>Sunday</th>
+            <td>...</td>
+            <td>...</td>
+            <td  class="text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
+            <td>...</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
 
 
         <div class="form-group extra-padding">
