@@ -1,3 +1,12 @@
+sup.plus-style {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
 .jumbotron img {
   min-width: 50vw;
   max-width: 60vw;
@@ -27,7 +36,8 @@
 }
 
 footer {
-  box-shadow: 0px 0px 10px #888888;
+  box-shadow: 0px 0px 10px rgba(200,200,200, .5);
+  background: rgba(200,200,200, .5);
 }
 
 footer p {
@@ -36,9 +46,16 @@ footer p {
   font-style: italic;
   color: $gray;
   margin: 0;
-  padding: .5em;
+  padding: 1.5em;
 }
 
 footer a {
   color: $brand-primary;
+}
+
+#map {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
 }
